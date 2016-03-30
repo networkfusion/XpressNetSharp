@@ -54,7 +54,7 @@ A proper example is comming, but for the moment you could try something like thi
 
 you could also have an interface for a throttle such as:
 
-public class Throttle : IThrottle
+    public class Throttle : IThrottle
     {
         private readonly Stream _stream;
 
