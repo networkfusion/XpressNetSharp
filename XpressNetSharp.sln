@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XpressNetSharp", "XpressNetSharp\XpressNetSharp.csproj", "{C88B7E76-65BC-4D94-A0D8-12EBDCF6E303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "XpressNetSharpUnitTests\UnitTests.csproj", "{649EA9F7-89F0-488A-8902-6EE675C280AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C88B7E76-65BC-4D94-A0D8-12EBDCF6E303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C88B7E76-65BC-4D94-A0D8-12EBDCF6E303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C88B7E76-65BC-4D94-A0D8-12EBDCF6E303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C88B7E76-65BC-4D94-A0D8-12EBDCF6E303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{649EA9F7-89F0-488A-8902-6EE675C280AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{649EA9F7-89F0-488A-8902-6EE675C280AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{649EA9F7-89F0-488A-8902-6EE675C280AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{649EA9F7-89F0-488A-8902-6EE675C280AC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

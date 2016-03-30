@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C88B7E76-65BC-4D94-A0D8-12EBDCF6E303}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XpressNetSharp</RootNamespace>
+    <AssemblyName>XpressNetSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Broadcasts\EmergencyStopBroadcastMessage.cs" />
+    <Compile Include="Broadcasts\ServiceModeEntryBroadcastMessage.cs" />
+    <Compile Include="Broadcasts\TrackPowerOffBroadcastMessage.cs" />
+    <Compile Include="Enums\AccessoryOutput.cs" />
+    <Compile Include="Enums\AccessoryState.cs" />
+    <Compile Include="Enums\BroadcastType.cs" />
+    <Compile Include="Enums\DirectionEnum.cs" />
+    <Compile Include="Enums\FunctionState.cs" />
+    <Compile Include="Enums\FunctionType.cs" />
+    <Compile Include="Enums\NibbleEnum.cs" />
+    <Compile Include="Enums\PowerUpMode.cs" />
+    <Compile Include="IResponse.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="PacketHandler.cs" />
+    <Compile Include="PacketIdentifier\CommunicationsStateResponse.cs" />
+    <Compile Include="PacketIdentifier\LocomotiveFunctionResponse.cs" />
+    <Compile Include="PacketRouter.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\FunctionOperation\SetFunctionOperationInstruction_Group5Message.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\FunctionOperation\SetFunctionOperationInstruction_Group4Message.cs" />
+    <Compile Include="Responses\GeneralResponse.cs" />
+    <Compile Include="ValueConverter.cs" />
+    <Compile Include="Packet.cs" />
+    <Compile Include="PacketHeaderType.cs" />
+    <Compile Include="PacketIdentifier\CommandStationOperationRequest.cs" />
+    <Compile Include="PacketIdentifier\CommandStationOperationResponse.cs" />
+    <Compile Include="PacketIdentifier\LocomotiveFunctionRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\AccDecoderInfoReqMessage.cs" />
+    <Compile Include="Requests\AccDecoderOperationsReqMessage.cs" />
+    <Compile Include="Broadcasts\NormalOperationsResumedBroadcastMessage.cs" />
+    <Compile Include="Responses\AccessoryDecoderInformationResp.cs" />
+    <Compile Include="Responses\AddressInquiryResp.cs" />
+    <Compile Include="Responses\CmdStnSoftwareVersionResp.cs" />
+    <Compile Include="Responses\CmdStnStatusResp.cs" />
+    <Compile Include="Responses\FunctionTypeResp.cs" />
+    <Compile Include="Responses\LocoInfoResp_DoubleHeaderResp.cs" />
+    <Compile Include="Responses\LocoInfoResp_MultiUnitAddressResp.cs" />
+    <Compile Include="Responses\LocoInfoResp_MultiUnitResp.cs" />
+    <Compile Include="Responses\LocoInfoResp_NormalResp.cs" />
+    <Compile Include="Responses\LocoOperationHandledByAnotherDeviceResp.cs" />
+    <Compile Include="Responses\ServiceModeProgrammingResultsResp.cs" />
+    <Compile Include="Responses\SetMultiUnitOrDoubleHeaderErrorResp.cs" />
+    <Compile Include="AckRespMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\MultiUnitOperation\AddLocoToMultiUnitReqMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\MultiUnitOperation\AddLocoToMultiUnitReq_ReversedDirectionMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\AddressInquiry\CmdStnLocoStack\ForwardSearchMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\AddressInquiry\CmdStnLocoStack\BackwardSearchMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\AddressInquiry\MultiUnitMember\ForwardSearchMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\AddressInquiry\MultiUnitMember\BackwardSearchMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\AddressInquiry\MultiUnit\ForwardSearchMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\AddressInquiry\MultiUnit\BackwardSearchMessage.cs" />
+    <Compile Include="Requests\CommandStationOperations\CmdStnSoftwareVersionReqMessage.cs" />
+    <Compile Include="Requests\CommandStationOperations\CmdStnStatusReqMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\DeleteLocoFromCmdStnStackReqMessage.cs" />
+    <Compile Include="Requests\CommandStationOperations\DirectModeReadReqMessage.cs" />
+    <Compile Include="Requests\CommandStationOperations\DirectModeWriteReqMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\DoubleHeaderOperation\EstablishDoubleHeaderMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\DoubleHeaderOperation\DesolveDoubleHeaderMessage.cs" />
+    <Compile Include="Requests\EmergencyStopAllLocosReqMessage.cs" />
+    <Compile Include="Requests\CommandStationOperations\EmergencyStopOperationsReqMessage.cs" />
+    <Compile Include="Requests\EmergencyStopSingleLocoReqMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\FunctionTypeReqMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\LocoInfoReqMessage.cs" />
+    <Compile Include="ValueWatcher.cs" />
+    <Compile Include="XpressNetConstants.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\OperationsModeProgramming\OperationsBitModeWriteReqMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\OperationsModeProgramming\OperationsByteModeWriteReqMessage.cs" />
+    <Compile Include="Requests\CommandStationOperations\PagedModeReadReqMessage.cs" />
+    <Compile Include="Requests\CommandStationOperations\PagedModeWriteReqMessage.cs" />
+    <Compile Include="XpressNetProtocolViolationException.cs" />
+    <Compile Include="Requests\CommandStationOperations\RegisterModeReadReqMessage.cs" />
+    <Compile Include="Requests\CommandStationOperations\RegisterModeWriteReqMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\MultiUnitOperation\RemoveLocoFromMultiUnitReqMessage.cs" />
+    <Compile Include="Requests\CommandStationOperations\ResumeOperationsReqMessage.cs" />
+    <Compile Include="Requests\CommandStationOperations\ServiceModeResultsReqMessage.cs" />
+    <Compile Include="Requests\CommandStationOperations\SetCmdStnPowerUpModeMessage.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\FunctionOperation\SetFunctionOperationInstruction_Group1Message.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\FunctionOperation\SetFunctionOperationInstruction_Group2Message.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\FunctionOperation\SetFunctionOperationInstruction_Group3Message.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\FunctionState\SetFunctionType_Group1Message.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\FunctionState\SetFunctionType_Group2Message.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\FunctionState\SetFunctionType_Group3Message.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\Speed\SetLocoSpeedAndDirection_SpeedSteps128Message.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\Speed\SetLocoSpeedAndDirection_SpeedSteps14Message.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\Speed\SetLocoSpeedAndDirection_SpeedSteps27Message.cs" />
+    <Compile Include="Requests\LocomotiveFunctions\Speed\SetLocoSpeedAndDirection_SpeedSteps28Message.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
